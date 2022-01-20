@@ -1,0 +1,130 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font-size: 16px;
+}
+
+body {
+  font-family: sans-serif;
+  margin-inline: auto;
+  max-width: 480px;
+}
+
+h1,
+h2,
+form {
+  margin-bottom: 1rem;
+}
+
+header,
+main {
+  padding: 1rem;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+}
+
+li + li {
+  margin-left: 1rem;
+}
+
+form,
+label {
+  display: flex;
+}
+
+label {
+  flex-direction: column;
+  gap: 0.25rem;
+  font-size: 0.875rem;
+}
+
+button {
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+button,
+input {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid gray;
+  border-radius: 4px;
+}
+
+form input,
+form button {
+  align-self: flex-end;
+}
+
+form input {
+  border-right: 0;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+}
+
+form > button {
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+}
+
+.todo-item {
+  display: flex;
+  width: 100%;
+  border-radius: 4px;
+}
+
+.todo-item + .todo-item {
+  margin-top: 0.5rem;
+}
+
+.todo-item:hover {
+  background-color: dodgerblue;
+}
+
+.todo-item:hover button {
+  color: white;
+}
+
+.todo-item.todo-complete button:first-of-type {
+  text-decoration: line-through;
+}
+
+.todo-item.todo-complete button:first-of-type {
+  color: lightgray;
+}
+
+.todo-item button {
+  background-color: transparent;
+  padding-block: 1rem;
+  border: 0;
+}
+
+.todo-item button:first-of-type {
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+}
+
+.todo-item button:first-of-type span {
+  align-self: flex-start;
+}
+
+.todo-item button:last-of-type {
+  align-self: stretch;
+  min-width: 2rem;
+}
+
+.todo-item button:last-of-type:hover {
+  background-color: crimson;
+  color: white;
+}
